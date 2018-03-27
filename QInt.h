@@ -45,6 +45,8 @@ public:
     QInt operator >> (int);
 
     QInt operator = (const QInt &);
+
+    void onBit(int);
 };
 
 string ConvertQIntToBinString(QInt);

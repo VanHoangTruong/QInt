@@ -223,6 +223,12 @@ QInt QInt::operator = (const QInt &p){
     return *this;
 }
 
+//bật bit tại vị trí post của QInt lên 1
+void QInt::onBit(int pos) {
+    int index = pos / 8;
+    int bit = pos % 8;
+    data[15 - index] = (int)data[15 - index] | (1 << bit);
+}
 //---------------------------------------------------------------------------------------------
 
 // hàm xuất ra màn hình số QInt ở dạng nhị phân
