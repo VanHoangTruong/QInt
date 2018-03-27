@@ -10,6 +10,9 @@ public:
     //constructor có tham số của class QInt
     QInt(unsigned char initData[16]);
 
+    void onBit(int);
+    bool getBit(int) const;
+
     //operator + cộng 2 số kiểu QInt
     QInt operator + (const QInt &);
 
@@ -45,8 +48,6 @@ public:
     QInt operator >> (int);
 
     QInt operator = (const QInt &);
-
-    void onBit(int);
 };
 
 string ConvertQIntToBinString(QInt);
